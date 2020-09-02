@@ -10,6 +10,9 @@ export class RankingComponent implements OnInit {
   @Input()
   listOfQuotes: Quotation[];
 
+  @Input()
+  title: string;
+
   constructor() {}
 
   ngOnInit(): void {}

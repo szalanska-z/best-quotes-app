@@ -9,6 +9,9 @@ import { QUOTES } from './models/data-base';
 })
 export class AppComponent {
   showForm = false;
+  titleMain = 'Najlepsze cytaty';
+  titleBest = 'Najlepsze';
+  titleWorst = 'Najgorsze';
 
   quotes: Quotation[] = QUOTES;
 
@@ -39,5 +42,13 @@ export class AppComponent {
 
   removeVote(quotation: Quotation, value: number) {
     quotation.votes -= this.value;
+  }
+
+  bestQuotes() {
+    return this.quotes.filter((item) => item.votes > 0);
+  }
+
+  worstQuotes() {
+    return this.quotes.filter((item) => item.votes < 0);
   }
 }

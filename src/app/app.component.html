@@ -1,4 +1,4 @@
-<app-navbar></app-navbar>
+<app-navbar [title]="titleMain"></app-navbar>
 
 <div class="container q-container">
   <button class="btn-floating teal add-button">
@@ -49,8 +49,15 @@
 
     <!-- Sekcja rankingów -->
     <div class="col s4">
-      <app-ranking [listOfQuotes]="quotes"></app-ranking>
-      <div class="col s12">
+      <app-ranking
+        [listOfQuotes]="bestQuotes()"
+        [title]="titleBest"
+      ></app-ranking>
+      <app-ranking
+        [listOfQuotes]="worstQuotes()"
+        [title]="titleWorst"
+      ></app-ranking>
+      <!-- <div class="col s12">
         <h5>Najgorzej ocenione</h5>
         <div class="collection">
           <ng-container *ngFor="let quotation of quotes">
@@ -61,7 +68,7 @@
             </p>
           </ng-container>
         </div>
-      </div>
+      </div> -->
     </div>
   </div>
 </div>
