@@ -38,9 +38,6 @@
         </div>
       </div>
     </div>
-    <!-- Koniec listy cytatów -->
-
-    <!-- Sekcja rankingów -->
     <div class="col s4">
       <app-ranking
         [listOfQuotes]="bestQuotes()"
@@ -50,18 +47,6 @@
         [listOfQuotes]="worstQuotes()"
         [title]="titleWorst"
       ></app-ranking>
-      <!-- <div class="col s12">
-        <h5>Najgorzej ocenione</h5>
-        <div class="collection">
-          <ng-container *ngFor="let quotation of quotes">
-            <p class="collection-item" *ngIf="quotation.votes < 0">
-              <span class="blue lighten-4 badge">{{ quotation.votes }}</span>
-              {{ quotation.sentence }} <br />
-              <span class="blue-text">{{ quotation.author }}</span>
-            </p>
-          </ng-container>
-        </div>
-      </div> -->
     </div>
   </div>
 </div>
