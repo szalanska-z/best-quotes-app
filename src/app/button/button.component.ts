@@ -10,6 +10,7 @@ export class ButtonComponent implements OnInit {
   clickButton = new EventEmitter<void>();
   @Input()
   customClasses: string;
+  @Input() value: number;
   constructor() {}
 
   ngOnInit(): void {}
