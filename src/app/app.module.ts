@@ -7,9 +7,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RankingComponent } from './ranking/ranking.component';
 import { FormComponent } from './form/form.component';
 import { ButtonComponent } from './button/button.component';
+import { VoteButtonsComponent } from './vote-buttons/vote-buttons.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, RankingComponent, FormComponent, ButtonComponent],
+  declarations: [AppComponent, NavbarComponent, RankingComponent, FormComponent, ButtonComponent, VoteButtonsComponent],
   imports: [BrowserModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

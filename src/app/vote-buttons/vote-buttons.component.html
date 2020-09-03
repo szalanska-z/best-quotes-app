@@ -1,0 +1,14 @@
+<app-button
+  customClasses="btn blue mr-5"
+  [value]="value"
+  (clickButton)="addVoteValue.emit(value)"
+>
+  <i class="material-icons">exposure_plus_1</i>
+</app-button>
+<app-button
+  customClasses="btn red"
+  [value]="value"
+  (clickButton)="removeVoteValue.emit(value)"
+>
+  <i class="material-icons">exposure_neg_1</i>
+</app-button>
