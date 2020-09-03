@@ -8,33 +8,13 @@ import { QUOTES } from './models/data-base';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  showForm = false;
   titleMain = 'Najlepsze cytaty';
   titleBest = 'Najlepsze';
   titleWorst = 'Najgorsze';
 
   quotes: Quotation[] = QUOTES;
 
-  quotation: Quotation = {
-    author: '',
-    sentence: '',
-    votes: 0,
-  };
-
   value = 1;
-
-  onSwitchForm(): void {
-    this.showForm = !this.showForm;
-  }
-
-  addQuotation() {
-    this.quotes.unshift(this.quotation);
-    this.quotation = {
-      author: '',
-      sentence: '',
-      votes: 0,
-    };
-  }
 
   addVote(quotation: Quotation, value: number) {
     quotation.votes += this.value;
@@ -50,5 +30,9 @@ export class AppComponent {
 
   worstQuotes() {
     return this.quotes.filter((item) => item.votes < 0);
+  }
+
+  onNewQuotation(item: Quotation) {
+    this.quotes.unshift(item);
   }
 }
